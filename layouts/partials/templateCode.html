@@ -1,7 +1,7 @@
 {{/* layouts/partials/templateCode.html */}}
 
-{{ $gistId := . }}
-<button onclick="toggleShow('{{ $gistId }}')">Template</button>
-<div class="gist-code" id="{{ $gistId }}" style="display:none;">
-  <script src="https://gist.github.com/m-hiyama/{{ $gistId }}.js"></script>
+{{ $filePath := . }}
+<button onclick='toggleShow("{{ $filePath }}")'>Template</button>
+<div class="source-code" id="{{ $filePath }}" style="display:none;">
+  <script src="http://gist-it.appspot.com/github/m-hiyama/hugo-sample-movie-blog/blob/master/{{ $filePath }}"></script>
 </div>

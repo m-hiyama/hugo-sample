@@ -7,9 +7,6 @@
 
 {{ .Content }}
 
-{{ partial "start-dumper.html" . }}
-  {{ partial "NodeVars.html" . }}
-  {{ partial "PageVars.html" . }}
-{{ partial "end-dumper.html" . }}
+{{ partial "templateCode.html" "layouts/_default/single.html" }}
 
-{{ partial "footer.html" . }}
+{{ partial "pageFooter.html" . }}

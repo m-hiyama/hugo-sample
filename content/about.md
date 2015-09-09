@@ -7,6 +7,4 @@ title: このブログについて
 
 映画の話題が中心のブログです。
 
-
-{{% gist ba57edfebe026c244603 %}}
-
+{{% source "content/about.md" %}}

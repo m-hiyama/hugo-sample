@@ -11,10 +11,6 @@
   {{end}}
 </ul>
 
-{{ partial "start-dumper.html" . }}
-  {{ partial "NodeVars.html" . }}
-  {{ partial "TaxonomyVars.html" . }}
-{{ partial "end-dumper.html" . }}
+{{ partial "templateCode.html" "layouts/_default/terms.html" }}
 
-{{ partial "footer.html" . }}
-
+{{ partial "nodeFooter.html" . }}
