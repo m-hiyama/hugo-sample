@@ -1,0 +1,14 @@
+{{/* layouts/essay/single.html */}}
+{{ partial "header.html" . }}
+<div style="color:red">Template: layouts/essay/single.html</div>
+
+<div style="background-color:lightblue" >
+  {{ .Content }}
+</div>
+
+{{ partial "start-dumper.html" . }}
+  {{ partial "NodeVars.html" . }}
+  {{ partial "PageVars.html" . }}
+{{ partial "end-dumper.html" . }}
+
+{{ partial "footer.html" . }}

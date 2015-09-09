@@ -1,0 +1,14 @@
+{{/* layouts/_default/summary.html */}}
+<div style="color:red">template: layouts/_default/summary.html</div>
+
+<div style="border: 1px gray solid; margin-bottom: 1ex">
+  <div><time>{{ .Date.Format "Mon, Jan 2, 2006" }}</time></div>
+  <h3>
+    <a href="{{ .Permalink }}">
+      {{ .Title }} ({{ .Type }})
+    </a> 
+  </h3>
+  <div>
+    {{ .Summary }}
+  </div>
+</div>

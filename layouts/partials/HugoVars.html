@@ -1,0 +1,13 @@
+{{if .Site.Params.inspect }}
+<div class="dump-vars">
+<h5>Hugo Variables</h5>
+<table border="1">
+<tr><th>Variable </th><th>Type</th><th>Value</th></tr>
+<tr><td>.Hugo</td><td>{{printf "%T" .Hugo}}</td><td>...</td></tr>
+<tr><td>.Hugo.Generator</td><td>{{printf "%T" .Hugo.Generator}}</td><td><code>{{printf "%+v" .Hugo.Generator}}</code></td></tr>
+<tr><td>.Hugo.Version</td><td>{{printf "%T" .Hugo.Version}}</td><td><code>{{printf "%+v" .Hugo.Version}}</code></td></tr>
+<tr><td>.Hugo.CommitHash</td><td>{{printf "%T" .Hugo.CommitHash}}</td><td><code>{{printf "%+v" .Hugo.CommitHash}}</code></td></tr>
+<tr><td>.Hugo.BuildDate</td><td>{{printf "%T" .Hugo.BuildDate}}</td><td><code>{{printf "%+v" .Hugo.BuildDate}}</code></td></tr>
+</table>
+</div>
+{{end}}

@@ -1,0 +1,8 @@
+*.log
+.REMOTE
+public/
+k.*
+kk.*
+kkk.*
+kkkk.*
+

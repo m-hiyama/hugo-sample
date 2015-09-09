@@ -1,0 +1,31 @@
+{{if .Site.Params.inspect }}
+<div class="dump-vars">
+<h5>Page Variables</h5>
+<table border="1">
+<tr><th>Variable </th><th>Type</th><th>Value</th></tr>
+<tr><td>.</td><td>{{printf "%T" .}}</td><td>...</td></tr>
+<tr><td>.Content</td><td>{{printf "%T" .Content}}</td><td><code>{{printf "%+v" .Content}}</code></td></tr>
+<tr><td>.Summary</td><td>{{printf "%T" .Summary}}</td><td><code>{{printf "%+v" .Summary}}</code></td></tr>
+<tr><td>.Truncated</td><td>{{printf "%T" .Truncated}}</td><td><code>{{printf "%+v" .Truncated}}</code></td></tr>
+<tr><td>.Description</td><td>{{printf "%T" .Description}}</td><td><code>{{printf "%+v" .Description}}</code></td></tr>
+<tr><td>.Keywords</td><td>{{printf "%T" .Keywords}}</td><td><code>{{printf "%+v" .Keywords}}</code></td></tr>
+<tr><td>.PublishDate</td><td>{{printf "%T" .PublishDate}}</td><td><code>{{printf "%+v" .PublishDate}}</code></td></tr>
+<tr><td>.Type</td><td>{{printf "%T" .Type}}</td><td><code>{{printf "%+v" .Type}}</code></td></tr>
+<tr><td>.Section</td><td>{{printf "%T" .Section}}</td><td><code>{{printf "%+v" .Section}}</code></td></tr>
+<tr><td>.RelPermalink</td><td>{{printf "%T" .RelPermalink}}</td><td><code>{{printf "%+v" .RelPermalink}}</code></td></tr>
+<tr><td>.LinkTitle</td><td>{{printf "%T" .LinkTitle}}</td><td><code>{{printf "%+v" .LinkTitle}}</code></td></tr>
+<tr><td>.TableOfContents</td><td>{{printf "%T" .TableOfContents}}</td><td><code>{{printf "%+v" .TableOfContents}}</code></td></tr>
+<tr><td>.Prev</td><td>{{printf "%T" .Prev}}</td><td><code>{{printf "%+v" .Prev}}</code></td></tr>
+<tr><td>.Next</td><td>{{printf "%T" .Next}}</td><td><code>{{printf "%+v" .Next}}</code></td></tr>
+<tr><td>.PrevInSection</td><td>{{printf "%T" .PrevInSection}}</td><td><code>{{printf "%+v" .PrevInSection}}</code></td></tr>
+<tr><td>.NextInSection</td><td>{{printf "%T" .NextInSection}}</td><td><code>{{printf "%+v" .NextInSection}}</code></td></tr>
+<tr><td>.FuzzyWordCount</td><td>{{printf "%T" .FuzzyWordCount}}</td><td><code>{{printf "%+v" .FuzzyWordCount}}</code></td></tr>
+<tr><td>.WordCount</td><td>{{printf "%T" .WordCount}}</td><td><code>{{printf "%+v" .WordCount}}</code></td></tr>
+<tr><td>.ReadingTime</td><td>{{printf "%T" .ReadingTime}}</td><td><code>{{printf "%+v" .ReadingTime}}</code></td></tr>
+<tr><td>.Weight</td><td>{{printf "%T" .Weight}}</td><td><code>{{printf "%+v" .Weight}}</code></td></tr>
+<tr><td>.IsNode</td><td>{{printf "%T" .IsNode}}</td><td><code>{{printf "%+v" .IsNode}}</code></td></tr>
+<tr><td>.IsPage</td><td>{{printf "%T" .IsPage}}</td><td><code>{{printf "%+v" .IsPage}}</code></td></tr>
+<tr><td>.Params</td><td>{{printf "%T" .Params}}</td><td><code>{{printf "%+v" .Params}}</code></td></tr>
+</table>
+</div>
+{{end}}

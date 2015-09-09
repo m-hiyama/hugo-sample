@@ -1,0 +1,7 @@
+{{/* layouts/partials/templateCode.html */}}
+
+{{ $gistId := . }}
+<button onclick="toggleShow('{{ $gistId }}')">Template</button>
+<div class="gist-code" id="{{ $gistId }}" style="display:none;">
+  <script src="https://gist.github.com/m-hiyama/{{ $gistId }}.js"></script>
+</div>

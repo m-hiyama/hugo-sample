@@ -1,0 +1,13 @@
+{{/* layouts/partials/sequence.html */}}
+
+{{ $_type := printf "%T" . }}
+{{ if eq $_type "string" }}
+  {{ . }}
+{{ else }}
+  {{ range $i, $val := . }}
+     {{ if $i }},&nbsp;{{end}}
+     {{ $val }} 
+  {{ end }}
+{{ end }}
+
+

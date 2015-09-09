@@ -1,0 +1,18 @@
+{{if .Site.Params.inspect }}
+<div class="dump-vars">
+<h5>Node Variables</h5>
+<table border="1">
+<tr><th>Variable </th><th>Type</th><th>Value</th></tr>
+<tr><td>.</td><td>{{printf "%T" .}}</td><td>...</td></tr>
+<tr><td>.Title</td><td>{{printf "%T" .Title}}</td><td><code>{{printf "%+v" .Title}}</code></td></tr>
+<tr><td>.Date</td><td>{{printf "%T" .Date}}</td><td><code>{{printf "%+v" .Date}}</code></td></tr>
+<tr><td>.Permalink</td><td>{{printf "%T" .Permalink}}</td><td><code>{{printf "%+v" .Permalink}}</code></td></tr>
+<tr><td>.URL</td><td>{{printf "%T" .URL}}</td><td><code>{{printf "%+v" .URL}}</code></td></tr>
+<tr><td>.RSSLink</td><td>{{printf "%T" .RSSLink}}</td><td><code>{{printf "%+v" .RSSLink}}</code></td></tr>
+<tr><td>.Data</td><td>{{printf "%T" .Data}}</td><td><code>{{printf "%+v" .Data}}</code></td></tr>
+<tr><td>.Data.Pages</td><td>{{printf "%T" .Data.Pages}}</td><td><code>{{printf "%+v" .Data.Pages}}</code></td></tr>
+<tr><td>.IsNode</td><td>{{printf "%T" .IsNode}}</td><td><code>{{printf "%+v" .IsNode}}</code></td></tr>
+<tr><td>.IsPage</td><td>{{printf "%T" .IsPage}}</td><td><code>{{printf "%+v" .IsPage}}</code></td></tr>
+</table>
+</div>
+{{end}}

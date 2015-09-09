@@ -1,0 +1,13 @@
+baseurl = "http://hugo.chimaira.org/movie-blog/"
+title = "映画ブログ"
+
+languageCode = "ja-jp"
+metaDataFormat = "yaml" # デフォルトはtoml
+contentdir = "../movie-blog/content"
+[taxonomies]
+  tag = "tags"
+  year = "year"
+  direcotr = "directors"
+  actor = "actors"
+[params]
+  inspect = true

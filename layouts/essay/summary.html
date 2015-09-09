@@ -1,0 +1,14 @@
+{{/* layouts/essay/summary.html */}}
+<div style="color:red">template: layouts/essay/summary.html</div>
+
+<div style="border: 1px gray solid; margin-bottom: 1ex">
+  <div><time>{{ .Date.Format "Mon, Jan 2, 2006" }}</time></div>
+  <h3>
+    <a href="{{ .Permalink }}">
+      {{ .Title }}
+    </a> 
+  </h3>
+  <div style="background-color:lightblue;">
+    {{ .Summary }}
+  </div>
+</div>

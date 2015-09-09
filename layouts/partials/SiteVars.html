@@ -1,0 +1,25 @@
+{{if .Site.Params.inspect }}
+<div class="dump-vars">
+<h5>Site Variables</h5>
+<table border="1">
+<tr><th>Variable </th><th>Type</th><th>Value</th></tr>
+<tr><td>.Site</td><td>{{printf "%T" .Site}}</td><td>...</td></tr>
+<tr><td>.Site.BaseURL</td><td>{{printf "%T" .Site.BaseURL}}</td><td><code>{{printf "%+v" .Site.BaseURL}}</code></td></tr>
+<tr><td>.Site.Taxonomies</td><td>{{printf "%T" .Site.Taxonomies}}</td><td><code>{{printf "%+v" .Site.Taxonomies}}</code></td></tr>
+<tr><td>.Site.Pages</td><td>{{printf "%T" .Site.Pages}}</td><td><code>{{printf "%+v" .Site.Pages}}</code></td></tr>
+<tr><td>.Site.Params</td><td>{{printf "%T" .Site.Params}}</td><td><code>{{printf "%+v" .Site.Params}}</code></td></tr>
+<tr><td>.Site.Sections</td><td>{{printf "%T" .Site.Sections}}</td><td><code>{{printf "%+v" .Site.Sections}}</code></td></tr>
+<tr><td>.Site.Files</td><td>{{printf "%T" .Site.Files}}</td><td><code>{{printf "%+v" .Site.Files}}</code></td></tr>
+<tr><td>.Site.Menus</td><td>{{printf "%T" .Site.Menus}}</td><td><code>{{printf "%+v" .Site.Menus}}</code></td></tr>
+<tr><td>.Site.Title</td><td>{{printf "%T" .Site.Title}}</td><td><code>{{printf "%+v" .Site.Title}}</code></td></tr>
+<tr><td>.Site.Author</td><td>{{printf "%T" .Site.Author}}</td><td><code>{{printf "%+v" .Site.Author}}</code></td></tr>
+<tr><td>.Site.LanguageCode</td><td>{{printf "%T" .Site.LanguageCode}}</td><td><code>{{printf "%+v" .Site.LanguageCode}}</code></td></tr>
+<tr><td>.Site.DisqusShortname</td><td>{{printf "%T" .Site.DisqusShortname}}</td><td><code>{{printf "%+v" .Site.DisqusShortname}}</code></td></tr>
+<tr><td>.Site.Copyright</td><td>{{printf "%T" .Site.Copyright}}</td><td><code>{{printf "%+v" .Site.Copyright}}</code></td></tr>
+<tr><td>.Site.LastChange</td><td>{{printf "%T" .Site.LastChange}}</td><td><code>{{printf "%+v" .Site.LastChange}}</code></td></tr>
+<tr><td>.Site.Permalinks</td><td>{{printf "%T" .Site.Permalinks}}</td><td><code>{{printf "%+v" .Site.Permalinks}}</code></td></tr>
+<tr><td>.Site.BuildDrafts</td><td>{{printf "%T" .Site.BuildDrafts}}</td><td><code>{{printf "%+v" .Site.BuildDrafts}}</code></td></tr>
+<tr><td>.Site.Data</td><td>{{printf "%T" .Site.Data}}</td><td><code>{{printf "%+v" .Site.Data}}</code></td></tr>
+</table>
+</div>
+{{end}}

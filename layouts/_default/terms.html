@@ -1,0 +1,20 @@
+{{/* layouts/_default/terms.html */}}
+{{ partial "header.html" . }}
+<div style="color:red">Template: layouts/_default/terms.html</div>
+
+<h1>{{ .Title }}</h1>
+
+{{ $permalink := .Permalink }}
+<ul>
+  {{range .Data.Terms.Alphabetical }}
+  <li> <a href="{{ $permalink }}{{ .Name}}/">{{ .Name }}</a> </li>
+  {{end}}
+</ul>
+
+{{ partial "start-dumper.html" . }}
+  {{ partial "NodeVars.html" . }}
+  {{ partial "TaxonomyVars.html" . }}
+{{ partial "end-dumper.html" . }}
+
+{{ partial "footer.html" . }}
+

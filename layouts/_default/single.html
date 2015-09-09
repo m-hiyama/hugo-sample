@@ -1,0 +1,15 @@
+{{/* layouts/_default/single.html */}}
+{{ partial "header.html" . }}
+<div style="color:red">Template: layouts/_default/single.html</div>
+
+<h1>{{ .Title }}</h1>
+
+
+{{ .Content }}
+
+{{ partial "start-dumper.html" . }}
+  {{ partial "NodeVars.html" . }}
+  {{ partial "PageVars.html" . }}
+{{ partial "end-dumper.html" . }}
+
+{{ partial "footer.html" . }}

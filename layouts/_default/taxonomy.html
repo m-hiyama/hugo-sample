@@ -1,0 +1,22 @@
+{{/* layouts/_default/taxonomy.html */}}
+{{ partial "header.html" . }}
+<div style="color:red">Template: layouts/_default/taxonomy.html</div>
+
+<h1>{{ .Title }}</h1>
+
+<ol>
+  {{ range .Data.Pages }}
+  <li>
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+    <time>{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
+  </li>
+  {{ end }}
+</ol>
+
+
+
+{{ partial "NodeVars.html" . }}
+{{ partial "TaxonomyVars.html" . }}
+
+{{ partial "footer.html" . }}
+

@@ -1,0 +1,25 @@
+{{/* layouts/partial/header.html */}}
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{.Title}}</title>
+  <script>
+  var _show = 0;
+  function toggleShow(id) {
+    var elm = document.getElementById(id)
+    if (_show) {
+      elm.style.display = "none";
+      _show = 0;
+    } else {
+      elm.style.display = "block";
+      _show = 1;
+    }
+  }
+  </script>
+</head>
+<body>
+  <div>URL: {{.URL}}</div>
+  <div>Permalink: {{.Permalink}}</div>
+  

@@ -1,0 +1,12 @@
+{{/* layouts/_default/summary.html */}}
+<div style="color:red">template: layouts/movie/summary.html</div>
+
+<div style="border: 1px gray solid; margin-bottom: 1ex">
+  <div><time>{{ .Date.Format "Mon, Jan 2, 2006" }}</time></div>
+
+  <table style="background-color:pink; font-weight:bold;">
+    <tr><td>Title: <a href="{{ .Permalink }}">{{ .Title }}</a></td></tr>
+    <tr><td>Actors: {{ partial "sequence.html" .Params.actors }}</td></tr>
+  </table>
+
+</div>

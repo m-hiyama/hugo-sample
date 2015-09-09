@@ -1,0 +1,15 @@
+{{if .Site.Params.inspect }}
+<div class="dump-vars">
+<h5>Taxonomy Variables</h5>
+<table border="1">
+<tr><th>Variable </th><th>Type</th><th>Value</th></tr>
+<tr><td>.Data</td><td>{{printf "%T" .Data}}</td><td>...</td></tr>
+<tr><td>.Data.Singular</td><td>{{printf "%T" .Data.Singular}}</td><td><code>{{printf "%+v" .Data.Singular}}</code></td></tr>
+<tr><td>.Data.Plural</td><td>{{printf "%T" .Data.Plural}}</td><td><code>{{printf "%+v" .Data.Plural}}</code></td></tr>
+<tr><td>.Data.Terms</td><td>{{printf "%T" .Data.Terms}}</td><td><code>{{printf "%+v" .Data.Terms}}</code></td></tr>
+<tr><td>.Data.Terms.Alphabetical</td><td>{{printf "%T" .Data.Terms.Alphabetical}}</td><td><code>{{printf "%+v" .Data.Terms.Alphabetical}}</code></td></tr>
+<tr><td>.Data.Terms.ByCount</td><td>{{printf "%T" .Data.Terms.ByCount}}</td><td><code>{{printf "%+v" .Data.Terms.ByCount}}</code></td></tr>
+<tr><td>.Data.Pages</td><td>{{printf "%T" .Data.Pages}}</td><td><code>{{printf "%+v" .Data.Pages}}</code></td></tr>
+</table>
+</div>
+{{end}}

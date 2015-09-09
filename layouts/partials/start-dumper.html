@@ -1,0 +1,6 @@
+{{/* layouts/partials/start-dumper.html */}}
+{{ if .Site.Params.inspect }}
+<button onClick="toggleShow('object-dumper');">Variables</button>
+<div id="object-dumper" style="display:none;">
+  <hr>
+{{ end }}

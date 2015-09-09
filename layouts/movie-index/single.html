@@ -1,0 +1,30 @@
+{{/* layouts/movie-index/single.html */}}
+{{ partial "header.html" . }}
+<div style="color:red">Template: layouts/movie-index/single.html</div>
+
+
+  <dl>
+  {{ range $key, $val := .Site.Taxonomies}}
+  <dt>{{$key}}(key {{printf "%T" $key}} ) (val {{printf "%T" $val }} )</dt>
+  <dd>
+    <dl>
+      {{range $key, $val := .}}
+      <dt>{{$key}} (key {{printf "%T" $key}} ) (val {{printf "%T" $val }} )</dt>
+      <dd>
+	<ul>
+	  {{ range $val}}
+	  <li>(this {{printf "%T" . }})<a href="{{.Page.Permalink}}">{{ .Page.Title}}({{.Page.Permalink}})</a></li>
+	  {{end}}
+	</ul>
+      </dd>
+      {{end}}
+    </dl>
+  </dd>
+  {{end}}
+</dl>
+
+
+{{partial "NodeVars.html" .}}
+{{partial "PageVars.html" .}}
+
+{{partial "footer.html" . }}

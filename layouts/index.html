@@ -1,0 +1,48 @@
+{{/* layouts/index.html */}}
+{{ partial "header.html" . }}
+<div style="color:red">Template: layouts/index.html</div>
+
+<h1>{{ .Title }}</h1>
+
+{{ range .Data.Pages }}
+{{ .Render "summary" }}
+{{ end }}
+
+<h2>トップレベル</h2>
+
+<ul>
+  {{ range where .Site.Pages "Section" "" }}
+  <li><a href="{{.Permalink}}">{{ .Title }}</a></li>
+  {{end}}
+</ul>
+
+<h2>セクション</h2>
+
+{{ $baseUrl := .Site.BaseURL }}
+<ul>
+  {{ range $key, $val := .Site.Sections }}
+  {{ if not (eq $key "") }}
+  <li><a href="{{ $baseUrl }}{{ $key }}/">{{ $key }}</a></li>
+  {{ end }}
+  {{ end }}
+</ul>
+
+<h2>エッセイ</h2>
+
+<ul>
+  {{ range where .Site.Pages "Type" "essay" }}
+  <li><a href="{{.Permalink}}">{{ .Title }}</a></li>
+  {{end}}
+</ul>
+
+<h2>分類</h2>
+
+<ul>
+  {{ range $key, $val := .Site.Taxonomies }}
+  <li><a href="{{ $baseUrl }}{{ $key }}/">{{ $key }}</a></li>
+  {{ end }}
+</ul>
+
+{{ partial "templateCode" "42b97594646eade7c72f" }}
+
+{{ partial "indexFooter.html" . }}

@@ -1,0 +1,31 @@
+{{/* layouts/movie/single.html */}}
+{{ partial "header.html" . }}
+<div style="color:red">Template: layouts/movie/single.html</div>
+
+<table style="background-color:pink; font-weight:bold;">
+  <tr><td>Title: {{ .Title }}</td></tr>
+  <tr><td>Directors:  {{ partial "sequence.html" .Params.directors }}</td></tr>
+  <tr><td>Actors: {{ partial "sequence.html" .Params.actors }}</td></tr>
+  <tr><td>Year: {{ .Params.year }}</td></tr>
+</table>
+
+<ul>
+  {{ $_u := .Params.urls }}
+{{ $_type := printf "%T" $_u }}
+{{ if eq $_type "string" }}
+  <li><a href="{{ $_u }}">{{ $_u }}</a></li>
+{{ else }}
+  {{ range  $_u }}
+   <li><a href="{{ . }}">{{ . }}</a></li>
+  {{ end }}
+{{ end }}
+</ul>
+
+{{ .Content }}
+
+{{ partial "start-dumper.html" . }}
+  {{ partial "NodeVars.html" . }}
+  {{ partial "PageVars.html" . }}
+{{ partial "end-dumper.html" . }}
+
+{{ partial "footer.html" . }}
