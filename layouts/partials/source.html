@@ -1,0 +1,7 @@
+{{/* layouts/partials/source.html */}}
+
+{{ $filePath := .Params.source }}
+<button onclick='toggleShow("{{ $filePath }}")'>Source</button>
+<div class="source-code" id="{{ $filePath }}" style="display:none;">
+  <script src="http://gist-it.appspot.com/github/m-hiyama/hugo-sample-movie-blog/blob/master/{{ $filePath }}"></script>
+</div>
