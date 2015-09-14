@@ -1,7 +1,11 @@
 {{/* layouts/partials/source.html */}}
 
+{{ $githubRepoPrefix := "m-hiyama/hugo-sample-movie-blog/blob/master" }}
 {{ $filePath := .Params.source }}
 <button onclick='toggleShow("{{ $filePath }}")'>Source</button>
 <div class="source-code" id="{{ $filePath }}" style="display:none;">
-  <script src="http://gist-it.appspot.com/github/m-hiyama/hugo-sample-movie-blog/blob/master/{{ $filePath }}"></script>
+  <script src="http://gist-it.appspot.com/github/{{ $githubRepoPrefix }}/{{ $filePath }}"></script>
 </div>
+
+
+<script src="http://gist-it.appspot.com/github/{{ $githubRepoPrefix }}/{{ .Params.source }}"></script>

@@ -1,0 +1,8 @@
+# 変数名の行に # を含む場合は、その行は無視する（コメント）
+# 変数名の行に ^ を含む場合は、値の表示を抑制する。
+^.Hugo
+.Hugo.Generator
+.Hugo.Version
+# CommitHash と BuildDate は設定されてないようだ？
+.Hugo.CommitHash
+.Hugo.BuildDate

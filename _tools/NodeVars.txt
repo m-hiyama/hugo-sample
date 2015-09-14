@@ -1,0 +1,15 @@
+# 変数名の行に # を含む場合は、その行は無視する（コメント）
+# 変数名の行に ^ を含む場合は、値の表示を抑制する。
+^.
+.Title
+.Date
+.Permalink
+.URL
+.RSSLink
+.Data
+# ページコレクションを保持している
+.Data.Pages
+.IsNode
+.IsPage
+# .Site # SiteVars として分ける
+# .Hugo # HugoVars として分ける

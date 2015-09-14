@@ -1,0 +1,19 @@
+# 変数名の行に # を含む場合は、その行は無視する（コメント）
+# 変数名の行に ^ を含む場合は、値の表示を抑制する。
+^.Site
+.Site.BaseURL
+.Site.Taxonomies
+.Site.Pages
+.Site.Params
+.Site.Sections
+.Site.Files
+.Site.Menus
+.Site.Title
+.Site.Author
+.Site.LanguageCode
+.Site.DisqusShortname
+.Site.Copyright
+.Site.LastChange
+.Site.Permalinks
+.Site.BuildDrafts
+.Site.Data
